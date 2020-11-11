@@ -71,8 +71,15 @@ function update() {
     gameState.player.setVelocityX(-160);
   } else if (gameState.cursors.right.isDown) {
     gameState.player.setVelocityX(160);
+  } else if (gameState.cursors.down.isDown) {
+    gameState.player.setVelocityY(160);
+  } else if (gameState.cursors.up.isDown) {
+    gameState.player.setVelocityY(-160);
+  } else if (gameState.cursors.space.isDown) {
+    this.scene.restart();
   } else {
-    gameState.player.setVelocityX(0);
+    gameState.player.setVelocityY(0);
+    gameState.player.setVelocityX(0)
   }
 }
 
